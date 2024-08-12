@@ -26,7 +26,7 @@ function hero() {
         { title: "Total Revenue", src: "money-dollar-box-line",logo:"", value: "$5k", profit: "9%", bgColor: "bg-pink-300" },
     ]
 
-    const percentage = 70;
+    const percentage = 89;
 
     const Activitys = [
         { title: "Goals", src: "crosshair-2-line", bgColor: "bg-orange-300" },
