@@ -83,9 +83,9 @@ function hero() {
                 <h1 className='text-white font-bold p-2 '>Dashboard</h1>
                 <div className='flex flex-col gap-4 sm:flex-row  h-auto pb-5'>
                     <div className=' rounded-md sm:w-2/3'>
-                        <ul className='flex sm:gap-2'>
+                        <ul className='grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-4'>
                             {Totals.map((total, index) => (
-                                <li key={index} className="w-1/4 bg-1f2029 rounded-md p-4" >
+                                <li key={index} className="  bg-1f2029 rounded-md p-4" >
                                     <img className={`h-6 sm:h-8 md:10 ${total.bgColor} p-1 rounded-md`} src={`../src/assets/${total.src}.svg`} alt="logo" />
                                     <span className='text-xs md:text-sm  text-white whitespace-nowrap'>{total.title}</span>
                                     <div className='flex justify-between items-center mt:2 md:mt-3'>
@@ -149,19 +149,19 @@ function hero() {
                     </div>
                 </div>
                 <div className='flex flex-col gap-4 sm:flex-row  h-auto pb-5'>
-                    <div className='bg-1f2029 w-full rounded-md sm:w-2/3 p-4'>
+                    <div className='bg-1f2029 w-full rounded-md sm:w-2/3 p-2'>
                         <div className=''>
                             <h3>Recent Orders</h3>
                         </div>
-                        <div className='flex justify-between py-2 ps-9 border-b border-dotted border-gray-500'>
+                        <div className='grid grid-cols-4 py-2 place-items-center  border-b border-dotted border-gray-500'>
                             <h3 >Customer</h3>
                             <h3>Order no</h3>
                             <h3>Amount</h3>
-                            <h3>Status</h3>
+                            <h3 className=''>Status</h3>
                         </div>
                         <ul>
                             {CustomerDetails.map((cus, index) => (
-                                <li className='flex items-center justify-between border-b border-dotted py-2 border-gray-500' key={index}>
+                                <li className=' grid grid-cols-4 place-items-center  border-b border-dotted py-2 border-gray-500' key={index}>
                                     <div className='flex items-center gap-1'>
                                         <img className='bg-orange-300 rounded-full h-9 w-9 ' src={`../src/assets/${cus.src}.svg`} alt="" />
                                         <h3 className='me-2 '>{cus.name}</h3>
